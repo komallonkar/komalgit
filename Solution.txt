@@ -1,0 +1,38 @@
+mkdir new-komal
+cd new-komal
+git init
+notepad one.txt
+notepad two.txt
+notepad three.txt
+git checkout -b Dev
+    git add one.txt
+    git commit -m "added 1 file to dev"
+    git checkout -b Test
+         git add two.txt
+git commit -m "added 2nd file to test"         
+git add three.txt
+ git commit -m "added 3rd file to test"
+git checkout -b master
+notepad one.txt
+git diff
+diff --git a/one.txt b/one.txt
+index 43dd47e..6962185 100644
+--- a/one.txt
++++ b/one.txt
+@@ -1 +1,2 @@
++did changes
+ one
+\ No newline at end of file
+
+git checkout Dev
+git add one.txt
+git commit -m "modified one.txt"
+git checkout master
+git merge Dev
+git merge Test
+git remote add origin https://github.com/komallonkar/komalgit.git
+git push -u origin master
+mkdir new-loc
+cd new-loc/
+git clone https://github.com/komallonkar/komalgit.git
+notepad Solution.txt
